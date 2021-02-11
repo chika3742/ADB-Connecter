@@ -1,0 +1,22 @@
+﻿<Window x:Class="ADB_Connecter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADB_Connecter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="296" Width="445" ResizeMode="NoResize" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <TextBlock x:Name="StatusText" HorizontalAlignment="Center" Margin="0,12,0,0" Text="待機中" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Width="300" TextAlignment="Center"/>
+        <Label Content="接続先端末ID" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="TargetIdTextBox" HorizontalAlignment="Right" Margin="0,54,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" FontSize="16" MaxLines="1" Height="26"/>
+        <Label Content="接続先端末IPアドレス" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="TargetIPAddressTextBox" HorizontalAlignment="Right" Margin="0,93,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" FontSize="16" MaxLines="1" Height="26" PreviewTextInput="TargetIPAddressTextBox_PreviewTextInput"/>
+        <Label Content="ポート" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="PortTextBox" HorizontalAlignment="Right" Margin="0,133,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="16" PreviewTextInput="PortTextBox_PreviewTextInput" CommandManager.PreviewExecuted="PortTextBox_PreviewExecuted" MaxLines="1" Height="26"/>
+        <CheckBox x:Name="AutoConnectCheckBox" Content="起動時に自動接続し、5秒後に終了" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center"/>
+        <Button x:Name="ProceedBtn" Content="今すぐ接続" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" FontSize="16" Padding="5,1,5,1" Click="ProceedBtn_Click"/>
+        <Button x:Name="CancelAutoConnectBtn" Content="自動終了のキャンセル" HorizontalAlignment="Right" Margin="0,0,99,10" VerticalAlignment="Bottom" FontSize="16" Padding="5,1,5,1"/>
+
+    </Grid>
+</Window>
